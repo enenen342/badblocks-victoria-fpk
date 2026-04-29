@@ -1,6 +1,6 @@
 # Badblocks Victoria for fnOS
 
-飞牛系统硬盘坏道检测应用。后端调用系统 `badblocks -sv` 做只读扫描，前端以 Victoria 风格显示硬盘列表、进度块、坏块计数和实时日志。
+飞牛系统硬盘坏道检测应用。后端调用系统 `badblocks -sv` 做只读扫描
 
 ## 功能
 
@@ -10,32 +10,21 @@
 - 支持停止当前扫描。
 - 默认不使用 `badblocks -w`，不会写入或擦除硬盘。
 
-## 构建
+## 飞牛系统使用方法
+### 编译运行
+下载仓库代码到飞牛系统本地，记住保存路径，运行以下命令：
+```bash
+cd /保存路径/badblocks-victoria-fpk
+chmod +x cmd/*
+chmod +x app/bin/fn-badblocks-victoria
+chmod -R a+rX app cmd config
+chmod a+r ICON.PNG ICON_256.PNG manifest
 
-需要 Go 1.22+ 和飞牛官方 `fnpack`。
+rm -f badblocks-victoria.fpk
+fnpack build --directory .
 
-Linux/macOS/WSL:
-
-```sh
-sh scripts/build-linux.sh
 ```
 
-Windows PowerShell:
+### fpk安装
+下载release内fpk文件，进入飞牛系统应用市场，点击左下角手动安装，选择fpk文件上传即可
 
-```powershell
-.\scripts\build-windows.ps1
-```
-
-构建成功后，二进制位于 `app/bin/fn-badblocks-victoria`。如果已安装 `fnpack`，`.fpk` 会输出到 `dist/`。
-
-## 本地运行
-
-```sh
-go run ./src -addr 127.0.0.1:24046 -ui ./ui
-```
-
-打开 `http://127.0.0.1:24046`。
-
-## 注意
-
-扫描整个大容量硬盘会非常耗时。检测系统盘或正在使用的阵列盘时，建议先确认备份和业务窗口。
