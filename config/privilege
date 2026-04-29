@@ -1,0 +1,13 @@
+{
+  "defaults": {
+    "run-as": "root"
+  },
+  "username": "badblocks-victoria",
+  "groupname": "badblocks-victoria",
+  "run_as_root": true,
+  "capabilities": ["SYS_RAWIO", "SYS_ADMIN"],
+  "devices": ["/dev"],
+  "network": {
+    "ports": [24046]
+  }
+}

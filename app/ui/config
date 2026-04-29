@@ -1,0 +1,13 @@
+{
+    ".url": {
+        "badblocks-victoria.Application": {
+            "title": "Badblocks Victoria",
+            "icon": "images/icon_{0}.png",
+            "type": "url",
+            "protocol": "http",
+            "port": "24046",
+            "url": "/",
+            "allUsers": false
+        }
+    }
+}

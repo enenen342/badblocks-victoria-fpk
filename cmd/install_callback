@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+
+ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
+BIN="$ROOT_DIR/target/bin/fn-badblocks-victoria"
+
+if [ -f "$BIN" ]; then
+  chown root:root "$BIN" 2>/dev/null || true
+  chmod 4755 "$BIN" 2>/dev/null || true
+fi
+
+exit 0

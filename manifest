@@ -1,0 +1,10 @@
+appname               = badblocks-victoria
+version               = 0.2.3
+display_name          = Badblocks Victoria
+desc                  = Read-only badblocks disk surface scanner for fnOS
+arch                  = x86_64
+source                = thirdparty
+maintainer            = local
+distributor           = local
+desktop_uidir         = ui
+desktop_applaunchname = badblocks-victoria.Application

@@ -1,0 +1,22 @@
+{
+    "data-share": {
+        "shares": [
+            {
+                "name": "badblocks-victoria",
+                "permission": {
+                    "rw": [
+                        "badblocks-victoria"
+                    ]
+                }
+            },
+            {
+                "name": "badblocks-victoria/data",
+                "permission": {
+                    "rw": [
+                        "badblocks-victoria"
+                    ]
+                }
+            }
+        ]
+    }
+}
